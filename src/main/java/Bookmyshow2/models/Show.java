@@ -15,7 +15,7 @@ public class Show extends BaseModel {
     private Date startTime;
     private Date endTime;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(value = EnumType.ORDINAL)
     private List<Feature> features;
     @ManyToOne

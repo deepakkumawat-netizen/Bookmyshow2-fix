@@ -12,7 +12,7 @@ public class Screen extends BaseModel{
     private List<Seat> seats;
 
     private ScreenStatus status;
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(value = EnumType.ORDINAL)
     private List<Feature> features;
 
